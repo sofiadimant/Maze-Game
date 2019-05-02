@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_atp2017-project-gui" default="compile.module.atp2017-project-gui">
+  <dirname property="module.atp2017-project-gui.basedir" file="${ant.file.module_atp2017-project-gui}"/>
+  
+  <property name="module.jdk.home.atp2017-project-gui" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.atp2017-project-gui" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.atp2017-project-gui" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.atp2017-project-gui" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="atp2017-project-gui.output.dir" value="${module.atp2017-project-gui.basedir}/out/production/ATP2017-Project-GUI"/>
+  <property name="atp2017-project-gui.testoutput.dir" value="${module.atp2017-project-gui.basedir}/out/test/ATP2017-Project-GUI"/>
+  
+  <path id="atp2017-project-gui.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="atp2017-project-gui.module.production.classpath">
+    <path refid="${module.jdk.classpath.atp2017-project-gui}"/>
+  </path>
+  
+  <path id="atp2017-project-gui.runtime.production.module.classpath">
+    <pathelement location="${atp2017-project-gui.output.dir}"/>
+  </path>
+  
+  <path id="atp2017-project-gui.module.classpath">
+    <path refid="${module.jdk.classpath.atp2017-project-gui}"/>
+    <pathelement location="${atp2017-project-gui.output.dir}"/>
+  </path>
+  
+  <path id="atp2017-project-gui.runtime.module.classpath">
+    <pathelement location="${atp2017-project-gui.testoutput.dir}"/>
+    <pathelement location="${atp2017-project-gui.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.atp2017-project-gui">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.atp2017-project-gui">
+    <patternset refid="excluded.from.module.atp2017-project-gui"/>
+  </patternset>
+  
+  <path id="atp2017-project-gui.module.sourcepath">
+    <dirset dir="${module.atp2017-project-gui.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.atp2017-project-gui" depends="compile.module.atp2017-project-gui.production,compile.module.atp2017-project-gui.tests" description="Compile module ATP2017-Project-GUI"/>
+  
+  <target name="compile.module.atp2017-project-gui.production" depends="register.custom.compilers" description="Compile module ATP2017-Project-GUI; production classes">
+    <mkdir dir="${atp2017-project-gui.output.dir}"/>
+    <javac2 destdir="${atp2017-project-gui.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.atp2017-project-gui}/javac">
+      <compilerarg line="${compiler.args.atp2017-project-gui}"/>
+      <bootclasspath refid="atp2017-project-gui.module.bootclasspath"/>
+      <classpath refid="atp2017-project-gui.module.production.classpath"/>
+      <src refid="atp2017-project-gui.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.atp2017-project-gui"/>
+    </javac2>
+    
+    <copy todir="${atp2017-project-gui.output.dir}">
+      <fileset dir="${module.atp2017-project-gui.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.atp2017-project-gui.tests" depends="register.custom.compilers,compile.module.atp2017-project-gui.production" description="compile module ATP2017-Project-GUI; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.atp2017-project-gui" description="cleanup module">
+    <delete dir="${atp2017-project-gui.output.dir}"/>
+    <delete dir="${atp2017-project-gui.testoutput.dir}"/>
+  </target>
+</project>

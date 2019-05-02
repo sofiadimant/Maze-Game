@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="737.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.helpControler">
+   <children>
+      <Text layoutX="285.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the PIZZA MAZE!" wrappingWidth="572.13671875">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="138.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your goal is to lead the tassty PIZZA from the pizzria to your house between the maze walls" wrappingWidth="631.13671875">
+         <font>
+            <Font name="Comic Sans MS Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="138.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INSTRACTIONS:" wrappingWidth="360.13671875">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="277.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- PIZZRIA (the start point)" wrappingWidth="186.13671875">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="startImage" fitHeight="52.0" fitWidth="55.0" layoutX="211.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="277.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- YOUR HOUSE (the end point)" wrappingWidth="245.13671875">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="endImage" fitHeight="52.0" fitWidth="55.0" layoutX="211.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="277.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- PIZZA MAN (the player)" wrappingWidth="186.13671875">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="pizzaManImage" fitHeight="52.0" fitWidth="55.0" layoutX="211.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="138.0" layoutY="531.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Use the arrow keys to manuover PIZZA MAN around the maze:" wrappingWidth="572.13671875">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="171.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-move up" wrappingWidth="82.13671875">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="upImage" fitHeight="40.0" fitWidth="40.0" layoutX="522.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" />
+      <Text layoutX="293.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-move down" wrappingWidth="82.13671875">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="438.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-move left" wrappingWidth="82.13671875">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="leftImage" fitHeight="40.0" fitWidth="44.0" layoutX="126.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="575.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-move right" wrappingWidth="82.13671875">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="rightImage" fitHeight="40.0" fitWidth="44.0" layoutX="244.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" />
+      <Text layoutX="211.0" layoutY="602.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose num of rows and columns and push &quot;Start Game&quot; butten in order to start the game " wrappingWidth="647.13671875">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="234.0" layoutY="642.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Push &quot;Solve&quot; butten in ordet to display the PIZZA path too hungry to wait and need some help" wrappingWidth="647.13671875">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="234.0" layoutY="683.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Push &quot;Hide&quot; butten in ordet to hide the PIZZA path" wrappingWidth="647.13671875">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="643.0" layoutY="689.0" mnemonicParsing="false" onAction="#menuBar" prefHeight="26.0" prefWidth="186.0" text="MENUE BAR OPTIONS">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="downImage" fitHeight="40.0" fitWidth="44.0" layoutX="398.0" layoutY="543.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" />
+      <Button layoutX="118.0" layoutY="586.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="74.0" text="Start Play">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="117.0" layoutY="626.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="106.0" text="Show Solution">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="118.0" layoutY="666.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="106.0" text="Hide Solution">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </Button>
+      <Text layoutX="279.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- GRASS (the maze walls )" wrappingWidth="186.13671875">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="roadImage" fitHeight="52.0" fitWidth="55.0" layoutX="211.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
