@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.propertyControler">
+   <children>
+      <ComboBox fx:id="cb_algo" layoutX="332.0" layoutY="121.0" prefWidth="150.0" />
+      <ComboBox fx:id="cb_generator" layoutX="332.0" layoutY="200.0" prefWidth="150.0" />
+      <Text layoutX="100.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Shearch Algorithem" wrappingWidth="211.00000335276127">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="btm_apply" layoutX="283.0" layoutY="247.0" mnemonicParsing="false" onAction="#apply" text="Apply">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Button>
+      <Text layoutX="100.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Maze Generator" wrappingWidth="211.00000888109207">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
